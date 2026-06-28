@@ -36,18 +36,22 @@
     <main class="container">
         <div style="margin-bottom: 32px;">
             <div style="font-size: 14px; color: #6e6e73; margin-bottom: 8px;">June 28, 2026 • Author: Vitalik</div>
-            <h1 style="margin: 0;">How to sync your GnuCash book</h1>
+            <h1 style="margin: 0;">Sharing GnuCash Book Among People or Devices</h1>
         </div>
 
-        <p>Hi! It's been two years of development of HandsOnMoney, the companion app I needed to carry a GnuCash book in my pocket. Since then, I have come to know many people and their setups. And boy, they are different (I mean, people are different, their setups are different too). In this article, I cover common mistakes and pitfalls of accessing a shared GnuCash book using multiple computers and companion apps on Android and iOS.</p>
+        <p>Hi! It's been two years of development of HandsOnMoney, the companion app I needed to carry a GnuCash book in my pocket.</p>
+
+        <p>Since then, I have come to know many people and their setups. And boy, are they different! In this article, I cover common mistakes and pitfalls of accessing a shared GnuCash book using multiple computers and companion apps on Android and iOS.</p>
 
         <h2>The basics</h2>
 
-        <p>But first, let's set the stage and expectations.</p>
+        <p>First, let's set the stage and expectations.</p>
 
-        <p>Unlike cloud-based solutions, GnuCash is a single-user system. Practically, it means that only a single user can access a book at a time.</p>
+        <p>Unlike cloud-based solutions, GnuCash is a single-user system. Practically, it means that only a single user can access your accounting book at a time.</p>
 
-        <p>You own your data. It's a blessing and a curse. On one side, your data is visible only to you, on the other side, you carry the responsibility of handling data corruption, conflicts, and simultaneous access.</p>
+        <p>Also you own your data. It's a blessing and a curse. On one side, your data is visible only to you, on the other side, you carry the responsibility of handling data corruption, conflicts, and simultaneous access.</p>
+
+        <p>GnuCash does its best to help you avoid problems. It has locking mechanisms to prevent multiple users in one book. However it's not a bulletproof solution and you still carry a responsibility of backing up your books.</p>
 
         <p>GnuCash can store data in multiple ways.</p>
 
@@ -59,29 +63,23 @@
 
         <h2>Who are "the users"</h2>
 
-        <p>The users can be real people needing access to a shared GnuCash book. Or it can be you accessing your file from multiple devices.</p>
+        <p>The users can be real people needing access to a shared GnuCash book. Or it can be you accessing your file from multiple devices. So from now on let's not care how many users access the book, but rather how many devices access it.</p>
 
-        <p>An important thing here is that GnuCash is inherently a desktop software. However, there are enthusiasts (including yours truly) who develop companion software to access the book from mobile platforms.</p>
+        <p>An important thing here is that GnuCash is inherently a desktop software. However, there are enthusiasts (including yours truly) who develop companion software to access the book from mobile platforms. So the "device" could be a laptop with GnuCash installed or a mobile app.</p>
 
-        <p>Thus said, let's talk about the ways you can share your book among several devices.</p>
+        <p>But before we discuss the mobile apps, let's only consider GnuCash running on multiple devices.</p>
 
         <h2>Expectations</h2>
 
         <p>If you are a new GnuCash user coming from a cloud-based solution, you are likely used to software that does a lot of things seamlessly.</p>
 
-        <p>However, GnuCash comes at the cost of:</p>
+        <p>However, GnuCash perks come at the cost of:</p>
 
         <ul>
             <li>Different instances of GnuCash have different data, and you are responsible for merging them semi-automatically</li>
-            <li>The users/devices take turns accessing the software.</li>
+            <li>Devices take turns accessing the software.</li>
             <li>Supporting your devices to run the same version of GnuCash.</li>
         </ul>
-
-        <h2>Problem in a nutshell</h2>
-
-        <p>You have a single file (or a database) and software that actively prevents simultaneous access to that file.</p>
-
-        <p>Independent of our conversation, try to step back and think about how you would share access to a text document among several devices.</p>
 
         <h2>Ratings</h2>
 
@@ -149,12 +147,12 @@
 
         <ol>
             <li>Make a copy of your book on each device.</li>
-            <li>Work on your books however you want (in parallel, offline, etc.)</li>
+            <li>Work on your books however you want (in parallel, offline, however you want)</li>
             <li>When ready, merge the books.</li>
             <li>Distribute the "master" book among devices.</li>
         </ol>
 
-        <h3>Merging the books</h3>
+        <h3>How to merge books</h3>
 
         <p>Good thing - you don't have to manually merge books, transaction-by-transaction. GnuCash gives you a specific format to export and import data while taking care of duplicates.</p>
 
@@ -192,9 +190,9 @@
             </tbody>
         </table>
 
-        <p>It's 2026, Dropbox is 17 years old. A good age to give it a small job to do before it leaves the house, before graduation. Of course, there are so many providers, platforms, and tools that you can use - iCloud, Google Drive, Syncthing.</p>
+        <p>It's 2026, Dropbox is 17 years old. A good age to give it a small job to do before graduation. Of course you can choose your tool of preference - iCloud, Google Drive, Syncthing.</p>
 
-        <p>One liability that comes with a file in the Cloud is a potential file conflict. There is absolutely no magic behind any Cloud - each device has its own copy of the GnuCash file. If accessed simultaneously, you will have two copies. To add insult to injury, some cloud providers make things obscure so you may not see the issue when it occured by rather see it so late in the game that it will mean a manual reconciliation of transactions. And last but not least, technical glitches (Cloud process crash, GnuCash crash) happen, and it is totally possible to end up with a corrupted book. Glitches are not unique to this synchronization way, but amplified by a human factor and the frequency of synchronizations.</p>
+        <p>One liability that comes with a file in the Cloud is a potential file conflict. There is absolutely no magic behind any Cloud - each device has its own copy of the GnuCash file. If accessed simultaneously, you will have two copies. To add insult to injury, some cloud providers make things obscure and you may not see the issue when it occurred but rather see it so late in the game that it will mean a manual reconciliation of transactions. And last but not least, technical glitches (Cloud process crash, GnuCash crash) happen, and it is totally possible to end up with a corrupted book. Glitches are not unique to this synchronization way, but amplified by a human factor and the frequency of synchronizations.</p>
 
         <h3>Workflow</h3>
 
@@ -238,7 +236,7 @@
 
         <p>If you are handy enough and can host a Postgres/MySQL database. This is likely the best option for you.</p>
 
-        <p>Instead of storing the book in a file, prone to corruption, you can store it in the database. As usual, there are a few tradeoffs - you have to install additional software (Postgres or MySQL), set up the server, connections, and manage security and privacy yourself.</p>
+        <p>Instead of storing the accounting book in a file, you can store it in the database. As usual, there are a few tradeoffs - you have to install additional software (Postgres or MySQL), set up the server, connections, and manage security and privacy yourself.</p>
 
         <p>The workflow is pretty much like the previous, with a small exception. The internal GnuCash lock mechanism works much better. Still, GnuCash maintainers are explicitly stating that the lock mechanism is a weak protection:</p>
 
@@ -247,7 +245,7 @@
             <a href="https://wiki.gnucash.org/wiki/SQL#Gnclock">https://wiki.gnucash.org/wiki/SQL#Gnclock</a></p>
         </blockquote>
 
-        <p>Also, privacy and security depend on you. Open your database to the world with a default password - and just wait for someone to delete all the tables. Or air-seal it in a local network without Internet access - and enjoy peace.</p>
+        <p>Also, privacy and security is your job. Open your database to the world with a default password - and just wait for someone to delete all the tables. Or air-seal it in a local network without Internet access - and enjoy peace.</p>
 
         <h2>Companion apps</h2>
 
@@ -255,12 +253,12 @@
 
         <p>There is no official GnuCash app for Android or iOS.</p>
 
-        <p>However, there are decent alternatives that you can use as your companion app. You can find more here <a href="https://wiki.gnucash.org/wiki/GnuCash_and_Mobile_Devices">https://wiki.gnucash.org/wiki/GnuCash_and_Mobile_Devices</a></p>
+        <p>However, there are decent alternatives that you can use as your companion app. You can find more <a href="https://wiki.gnucash.org/wiki/GnuCash_and_Mobile_Devices">here</a></p>
 
         <p>All of the apps support only two ways:</p>
 
         <ul>
-            <li>CSV sync</li>
+            <li>CSV sync (thus manual merge)</li>
             <li>Automatic sync via SQLite3 or XML file</li>
         </ul>
 
@@ -270,7 +268,7 @@
             <p>GnuCash itself is not available on mobile platforms, but there are some independently-developed mobile apps that can work with GnuCash. Few write directly to your file and those that do support only the SQLite3 backend. They don't use the GnuCash engine, generating their own SQL queries instead. That runs the risk that they'll get something wrong or that we'll change the SQL Schema in some way that breaks their implementation, so users are advised to test thoroughly on a scratch file before using them with production data and monitoring them carefully.</p>
         </blockquote>
 
-        <p>So while the workflow stays the same, there is one more risk to consider - data corruption by the companion app itself.</p>
+        <p>While the workflow stays the same, there is one more risk to consider - data corruption by the companion app itself.</p>
 
         <p>The reason here is simple: GnuCash does not provide any official library to work with data files. So every implementation that works with the file directly may not know something and unintentionally corrupt the GnuCash book.</p>
 
@@ -291,7 +289,6 @@
             <li>Check if GnuCash is open (it's a naive check, but still worth it)</li>
             <li>Sync accounts, transactions, commodities, and prices</li>
         </ol>
-
     </main>
 
     <!-- template-start:footer -->
