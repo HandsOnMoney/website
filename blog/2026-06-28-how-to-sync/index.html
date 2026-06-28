@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- template-start:head -->
+<!-- head content here -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>HandsOnMoney</title>
+</head>
+<!-- template-end -->
+
+<body>
+
+    <!-- template-start:nav -->
+<!-- Header with nav -->
+<nav class="container">
+    <ul>
+    <li>
+        <a href="/">
+        <img src="/assets/favicon.png" alt="Logo" style="height: 24px; margin-right: 8px; vertical-align: middle; border-radius: 4px;">
+        <strong>HandsOnMoney</strong>
+        </a>
+    </li>
+    </ul>
+    <ul>
+    <li><a href="/features">Features</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="https://apps.apple.com/us/app/handsonmoney/id6740042181">Download</a></li>
+    </ul>
+</nav>
+<!-- template-end -->
+    <main class="container">
+        <div style="margin-bottom: 32px;">
+            <div style="font-size: 14px; color: #6e6e73; margin-bottom: 8px;">June 28, 2026 • Author: Vitalik</div>
+            <h1 style="margin: 0;">Sharing GnuCash Book Among People or Devices</h1>
+        </div>
+
+        <p>Hi! It's been two years of development of HandsOnMoney, the companion app I needed to carry a GnuCash book in my pocket.</p>
+
+        <p>Since then, I have come to know many people and their setups. And boy, are they different! In this article, I cover common mistakes and pitfalls of accessing a shared GnuCash book using multiple computers and companion apps on Android and iOS.</p>
+
+        <h2>The basics</h2>
+
+        <p>First, let's set the stage and expectations.</p>
+
+        <p>Unlike cloud-based solutions, GnuCash is a single-user system. Practically, it means that only a single user can access your accounting book at a time.</p>
+
+        <p>Also you own your data. It's a blessing and a curse. On one side, your data is visible only to you, on the other side, you carry the responsibility of handling data corruption, conflicts, and simultaneous access.</p>
+
+        <p>GnuCash does its best to help you avoid problems. It has locking mechanisms to prevent multiple users in one book. However it's not a bulletproof solution and you still carry a responsibility of backing up your books.</p>
+
+        <p>GnuCash can store data in multiple ways.</p>
+
+        <ul>
+            <li>XML - in a text format (it's compressed, though, so not readable out of the box)</li>
+            <li>SQLite3 - a database in a file</li>
+            <li>Hosted database - a database on a computer network or even on the Internet</li>
+        </ul>
+
+        <h2>Who are "the users"</h2>
+
+        <p>The users can be real people needing access to a shared GnuCash book. Or it can be you accessing your file from multiple devices. So from now on let's not care how many users access the book, but rather how many devices access it.</p>
+
+        <p>An important thing here is that GnuCash is inherently a desktop software. However, there are enthusiasts (including yours truly) who develop companion software to access the book from mobile platforms. So the "device" could be a laptop with GnuCash installed or a mobile app.</p>
+
+        <p>But before we discuss the mobile apps, let's only consider GnuCash running on multiple devices.</p>
+
+        <h2>Expectations</h2>
+
+        <p>If you are a new GnuCash user coming from a cloud-based solution, you are likely used to software that does a lot of things seamlessly.</p>
+
+        <p>However, GnuCash perks come at the cost of:</p>
+
+        <ul>
+            <li>Different instances of GnuCash have different data, and you are responsible for merging them semi-automatically</li>
+            <li>Devices take turns accessing the software.</li>
+            <li>Supporting your devices to run the same version of GnuCash.</li>
+        </ul>
+
+        <h2>Ratings</h2>
+
+        <p>Each solution has its rating on different dimensions.</p>
+
+        <table style="border-collapse: collapse; width: 100%; border: 1px solid #d2d2d7;">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid #d2d2d7; padding: 8px;">Dimension</th>
+                    <th style="border: 1px solid #d2d2d7; padding: 8px;">What it measures</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Safety</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">How safe can I feel about my data getting corrupted?</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Automation</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">How much automatic tooling is available vs. how much manual labor it will require to support.</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Multi-user</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">How well does this solution work with multiple users.</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Real-time</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">How soon do I see data entered in other devices?</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Privacy & security</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">How much information do other companies see and how much it's prone for security breaches.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>The paranoid way - safest yet most painful</h2>
+
+        <table style="border-collapse: collapse; width: 100%; border: 1px solid #d2d2d7;">
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Safety</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️⭐️⭐️⭐️⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Automation</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Multi-user</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️⭐️⭐️⭐️⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Real-time</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Privacy & security</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️⭐️⭐️⭐️⭐️</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Workflow</h3>
+
+        <ol>
+            <li>Make a copy of your book on each device.</li>
+            <li>Work on your books however you want (in parallel, offline, however you want)</li>
+            <li>When ready, merge the books.</li>
+            <li>Distribute the "master" book among devices.</li>
+        </ol>
+
+        <h3>How to merge books</h3>
+
+        <p>Good thing - you don't have to manually merge books, transaction-by-transaction. GnuCash gives you a specific format to export and import data while taking care of duplicates.</p>
+
+        <ol>
+            <li>Choose one book as "master". For other books export transactions using File -> Export -> Export Transactions as CSV…</li>
+            <li>Open your "master" book.</li>
+            <li>For every CSV file you have, go to File -> Import -> Import Transactions from CSV … Do not forget to select "GnuCash Export Format" – this turns on a native GnuCash mechanism to work with splits.</li>
+            <li>Work out any conflicts should they pop up on the last import screen.</li>
+        </ol>
+
+        <h2>The Great File in the Cloud - just a file in a Dropbox</h2>
+
+        <table style="border-collapse: collapse; width: 100%; border: 1px solid #d2d2d7;">
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Safety</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Automation</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️⭐️⭐️⭐️⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Multi-user</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Real-time</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️⭐️⭐️⭐️⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Privacy & security</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">depends</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>It's 2026, Dropbox is 17 years old. A good age to give it a small job to do before graduation. Of course you can choose your tool of preference - iCloud, Google Drive, Syncthing.</p>
+
+        <p>One liability that comes with a file in the Cloud is a potential file conflict. There is absolutely no magic behind any Cloud - each device has its own copy of the GnuCash file. If accessed simultaneously, you will have two copies. To add insult to injury, some cloud providers make things obscure and you may not see the issue when it occurred but rather see it so late in the game that it will mean a manual reconciliation of transactions. And last but not least, technical glitches (Cloud process crash, GnuCash crash) happen, and it is totally possible to end up with a corrupted book. Glitches are not unique to this synchronization way, but amplified by a human factor and the frequency of synchronizations.</p>
+
+        <h3>Workflow</h3>
+
+        <ol>
+            <li>Put your file in a Cloud - Dropbox, iCloud, Google Drive, etc.</li>
+            <li>Instruct users to never ever access the file simultaneously. If you are the only user, stop being sloppy and forgetting to close GnuCash before closing the lid of your laptop.</li>
+            <li>Always wait for the cloud provider to synchronize files. If Cloud allows forcing a sync, always use it before opening a GnuCash book.</li>
+            <li>Be proactive about backups. Do not expect GnuCash mechanisms to save you - you are using an extra piece of software that GnuCash does not know about.</li>
+        </ol>
+
+        <h3>Privacy & security</h3>
+
+        <p>There is no rating because your privacy and security depend on your choices. Choose a provider that gives away your information without any questions, and you effectively have no privacy. Choose an offline tool like rsync or Syncthing - and you can disconnect from the Internet. As usual, the more privacy and security you want, the more friction you have.</p>
+
+        <h2>Look ma I'm a DBA! Hosting data in the database</h2>
+
+        <table style="border-collapse: collapse; width: 100%; border: 1px solid #d2d2d7;">
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Safety</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️⭐️⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Automation</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️⭐️⭐️⭐️⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Multi-user</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Real-time</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">⭐️⭐️⭐️⭐️⭐️</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">Privacy & security</td>
+                    <td style="border: 1px solid #d2d2d7; padding: 8px;">depends</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>If you are handy enough and can host a Postgres/MySQL database. This is likely the best option for you.</p>
+
+        <p>Instead of storing the accounting book in a file, you can store it in the database. As usual, there are a few tradeoffs - you have to install additional software (Postgres or MySQL), set up the server, connections, and manage security and privacy yourself.</p>
+
+        <p>The workflow is pretty much like the previous, with a small exception. The internal GnuCash lock mechanism works much better. Still, GnuCash maintainers are explicitly stating that the lock mechanism is a weak protection:</p>
+
+        <blockquote>
+            <p>Locking table, should have zero or one record. Provides weak protection against simultaneous access.<br>
+            <a href="https://wiki.gnucash.org/wiki/SQL#Gnclock">https://wiki.gnucash.org/wiki/SQL#Gnclock</a></p>
+        </blockquote>
+
+        <p>Also, privacy and security is your job. Open your database to the world with a default password - and just wait for someone to delete all the tables. Or air-seal it in a local network without Internet access - and enjoy peace.</p>
+
+        <h2>Companion apps</h2>
+
+        <p>Full disclosure: you are reading this article on the HandsOnMoney website. So assume I'm heavily biased and check things for yourself.</p>
+
+        <p>There is no official GnuCash app for Android or iOS.</p>
+
+        <p>However, there are decent alternatives that you can use as your companion app. You can find more <a href="https://wiki.gnucash.org/wiki/GnuCash_and_Mobile_Devices">here</a></p>
+
+        <p>All of the apps support only two ways:</p>
+
+        <ul>
+            <li>CSV sync (thus manual merge)</li>
+            <li>Automatic sync via SQLite3 or XML file</li>
+        </ul>
+
+        <p>It's virtually our first two solutions. So you can confidently use the first two workflows when using the companion app. However, you shall read the disclaimer from GnuCash carefully:</p>
+
+        <blockquote>
+            <p>GnuCash itself is not available on mobile platforms, but there are some independently-developed mobile apps that can work with GnuCash. Few write directly to your file and those that do support only the SQLite3 backend. They don't use the GnuCash engine, generating their own SQL queries instead. That runs the risk that they'll get something wrong or that we'll change the SQL Schema in some way that breaks their implementation, so users are advised to test thoroughly on a scratch file before using them with production data and monitoring them carefully.</p>
+        </blockquote>
+
+        <p>While the workflow stays the same, there is one more risk to consider - data corruption by the companion app itself.</p>
+
+        <p>The reason here is simple: GnuCash does not provide any official library to work with data files. So every implementation that works with the file directly may not know something and unintentionally corrupt the GnuCash book.</p>
+
+        <p>But since there is already a Cloud at play and you are likely backing up your data often (don't you?), you should be good enough to restore from any potential disaster.</p>
+
+        <h2>How things work in HandsOnMoney</h2>
+
+        <p>HandsOnMoney supports both ways - CSV sync and automatic sync using sqlite3 data format.</p>
+
+        <p>CSV export uses native GnuCash export format thus the first workflow works as described.</p>
+
+        <p>Automatic sync is prone to all the troubles described above (things depend on the Cloud provider you choose, if you are closing GnuCash). However, one thing is positively a bit different - you can have GnuCash and HandsOnMoney open on several devices and still be able to sync automatically.</p>
+
+        <p>Under the hood, there are two files - the one that HandsOnMoney works with and the one in the Cloud. When you are ready, you can sync the data. At that moment, HandsOnMoney will:</p>
+
+        <ol>
+            <li>Nag you to close GnuCash and wait for the Cloud to sync</li>
+            <li>Check if GnuCash is open (it's a naive check, but still worth it)</li>
+            <li>Sync accounts, transactions, commodities, and prices</li>
+        </ol>
+    </main>
+
+    <!-- template-start:footer -->
+    <footer class="container">
+        <div class="grid">
+        <div style="grid-column: span 2;">
+            <br/>
+            <p>
+                Built slowly by Vitalik.
+                <br/>
+                Shaped by brave first adopters.
+            </p>
+        </div>
+        <div>
+            <strong>About</strong>
+            <ul>
+            <li><a href="/principles.html" class="secondary">Principles</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>By Design</strong>
+            <ul>
+            <li><a href="/design#private">Private</a></li>
+            <li><a href="/design#offline">Offline</a></li>
+            <li><a href="/design#double-entry">Double-entry</a></li>
+            <li><a href="/design#multi-currency">Multi-currency</a></li>
+            <li><a href="/design#durability">Durable</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>Features</strong>
+            <ul>
+            <li><a href="/features#dashboard">Dashboard</a></li>
+            <li><a href="/features#accounts">Accounts</a></li>
+            <li><a href="/features#activity">Activity</a></li>
+            <li><a href="/features#sync">GnuCash sync</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>Community</strong>
+            <ul>
+            <li><a href="https://discord.gg/Wsk6MKnBr5">Discord</a></li>
+            <li><a href="https://www.reddit.com/r/HandsOnMoney/">Reddit</a></li>
+            <li><a href="https://www.youtube.com/@HandsOnMoneyApp">Youtube</a></li>
+            <li><a href="https://github.com/HandsOnMoney">GitHub</a></li>
+            <li><a href="https://x.com/VitalikPie">X</a></li>
+            </ul>
+        </div>
+        </div>
+    </footer>
+<!-- template-end -->
+
+</body>
+
+</html>
