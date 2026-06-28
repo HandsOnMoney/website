@@ -1,0 +1,31 @@
+footer ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+footer li {
+  list-style: none !important;
+}
+
+a {
+  color: var(--pico-muted-color);
+}
+
+a:visited {
+  color: var(--pico-muted-color);
+}
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.screenshots-grid img {
+  border-radius: 8px;
+}
+
+
+
+

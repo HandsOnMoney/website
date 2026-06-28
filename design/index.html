@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- template-start:head -->
+<!-- head content here -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>HandsOnMoney</title>
+</head>
+<!-- template-end -->
+
+<body>
+
+    <!-- template-start:nav -->
+<!-- Header with nav -->
+<nav class="container">
+    <ul>
+    <li>
+        <a href="/">
+        <img src="/assets/favicon.png" alt="Logo" style="height: 24px; margin-right: 8px; vertical-align: middle; border-radius: 4px;">
+        <strong>HandsOnMoney</strong>
+        </a>
+    </li>
+    </ul>
+    <ul>
+    <li><a href="/features">Features</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="https://apps.apple.com/us/app/handsonmoney/id6740042181">Download</a></li>
+    </ul>
+</nav>
+<!-- template-end -->
+    <main class="container">
+        <h1>Core Principle</h1>
+
+        <blockquote>
+            Simple by Default, Powerful when Needed
+
+            <footer>
+                <cite>— <a href="https://kde.org/announcements/plasma/5/5.10.0/">KDE</a></cite>
+            </footer>            
+        </blockquote>
+
+        <p>
+            That's the north star for me when building HandsOnMoney.
+            I'm pretty sure it's quite far away now. But my promise is to iterate towards that goal.
+        </p>
+
+        <h2>Simple</h2>
+
+        <p>
+            <ul>
+                <li>
+                    The app should be simple enough for a busy mom to use and not to bother about any technical complexities.
+                </li>
+                <li>                    
+                </li>                
+            </ul>
+            
+        </p>
+
+        <h2>Powerful</h2>
+
+        <p>
+            <ul>
+                <li>
+                    The geek should have the freedom to extend the app.
+                </li>
+                <li>
+                    The nerd should be able to do proper accounting using centuries-long practices.
+                </li>                
+            </ul>
+            
+        </p>
+
+        <h2>Result</h2>
+
+        <p>
+            As a result, the busy mom gets simple and approachable Apple design language.
+            The geek gets Shortcuts integration, CSV import/export, and sqlite3 datafile.
+            The nerd gets app based double-entry accounting principles.
+        </p>
+
+        <h2>The Means</h2>
+        <p>
+            <ul>
+                <li>Apple Swift - for the seamless integration with iPhone</li>
+                <li>Apple SwiftUI - to get access to the Apple design language</li>
+                <li>Sqlite3 - for data durability</li>
+                <ul>GnuCash compatibility - to give people agency over their data</ul>
+            </ul>
+        </p>
+
+
+        <h1 id="private">Private Data</h1>
+
+        <p>
+            All the accounts, transactions, splits, and plans are stored inside the application directory.
+            This means no one except you can get access to your accounting book.
+            It's private by design.
+        </p>
+
+        <h1 id="offline">Offline</h1>
+
+        <p>Working with the file on your device does not require an Internet connection. It's offline by design.</p>
+
+        <h1 id="double-entry">Double-entry</h1>
+
+        <p>
+            Double-entry accounting does not mean that you have to enter the same amount twice.
+            It's how the data is stored.
+            Each transaction has at least two parts - debit and credit accounts.
+            This approach allows you to account for all income, expenses, investments, and even I-owe-you's.
+        </p>
+
+        <h1 id="Multi-currency">Multi-currency</h1>
+
+        <p>HandsOnMoney supports all the modern currencies. Moreover, internally it supports custom commodities (UI coming soon) which enables you to track even your Bitcoin holdings.</p>
+
+        <h1 id="durability">Durability</h1>
+
+        <p>
+            The data is stored in Sqlite3 format. You can choose to export CSV or Sqlite3 data file.
+            Moreover HandsOnMoney syncs data with GnuCash file giving you agency over your data.
+        </p>
+
+
+
+    </main>
+
+    <!-- template-start:footer -->
+    <footer class="container">
+        <div class="grid">
+        <div style="grid-column: span 2;">
+            <br/>
+            <p>
+                Built slowly by Vitalik.
+                <br/>
+                Shaped by brave first adopters.            
+            </p>
+        </div>
+        <div>
+            <strong>About</strong>
+            <ul>
+            <li><a href="/principles.html" class="secondary">Principles</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>By Design</strong>
+            <ul>
+            <li><a href="/design#private">Private</a></li>
+            <li><a href="/design#offline">Offline</a></li>
+            <li><a href="/design#double-entry">Double-entry</a></li>
+            <li><a href="/design#multi-currency">Multi-currency</a></li>
+            <li><a href="/design#durability">Durable</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>Features</strong>
+            <ul>
+            <li><a href="/features#dashboard">Dashboard</a></li>
+            <li><a href="/features#accounts">Accounts</a></li>
+            <li><a href="/features#activity">Activity</a></li>            
+            <li><a href="/features#sync">GnuCash sync</a></li>            
+            </ul>
+        </div>
+        <div>
+            <strong>Community</strong>
+            <ul>
+            <li><a href="https://discord.gg/Wsk6MKnBr5">Discord</a></li>
+            <li><a href="https://www.reddit.com/r/HandsOnMoney/">Reddit</a></li>
+            <li><a href="https://www.youtube.com/@HandsOnMoneyApp">Youtube</a></li>
+            <li><a href="https://github.com/HandsOnMoney">GitHub</a></li>
+            <li><a href="https://x.com/VitalikPie">X</a></li>
+            </ul>
+        </div>        
+        </div>
+    </footer>
+<!-- template-end -->
+
+</body>
+
+</html>

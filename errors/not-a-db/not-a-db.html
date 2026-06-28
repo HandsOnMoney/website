@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<!-- template-start:head -->
+<!-- head content here -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>HandsOnMoney</title>
+</head>
+<!-- template-end -->
+
+<body>
+    <header>
+        <h1>❌ File is not a database</h1>
+        <aside>The selected file isn’t a valid SQLite database.</aside>
+    </header>
+    <h2>What is happening?</h2>
+    <p>
+        You are trying to link a file that is not a SQLite database.
+    </p>
+
+    <p>
+        SQLite file format is a medium that works both in GNUCash and HandsOnMoney.
+    </p>
+
+    <h2>How to fix?</h2>
+    <ul>
+        <li>Open your book in GNUCash</li>
+        <li>Click <em>File</em> -> <em>Save As...</em></li>
+        <li>Choose sqlite3 as a data format</li>
+        <li>Click <em>Save As</em></li>
+        <li>Exit the GNUCash</li>
+        <li>Wait until iCloud syncs the file to your iPhone</li>
+        <li>Try to link the file again in HandsOnMoney</li>
+    </ul>
+
+    <img src="gnucash-save-as.png" />
+
+</body>
+
+</html>

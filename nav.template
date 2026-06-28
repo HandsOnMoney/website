@@ -1,0 +1,16 @@
+<!-- Header with nav -->
+<nav class="container">
+    <ul>
+    <li>
+        <a href="/">
+        <img src="/assets/favicon.png" alt="Logo" style="height: 24px; margin-right: 8px; vertical-align: middle; border-radius: 4px;">
+        <strong>HandsOnMoney</strong>
+        </a>
+    </li>
+    </ul>
+    <ul>
+    <li><a href="/features">Features</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="https://apps.apple.com/us/app/handsonmoney/id6740042181">Download</a></li>
+    </ul>
+</nav>

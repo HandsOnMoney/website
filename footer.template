@@ -1,0 +1,49 @@
+    <footer class="container">
+        <div class="grid">
+        <div style="grid-column: span 2;">
+            <br/>
+            <p>
+                Built slowly by Vitalik.
+                <br/>
+                Shaped by brave first adopters.            
+            </p>
+        </div>
+        <div>
+            <strong>About</strong>
+            <ul>
+            <li><a href="/principles.html" class="secondary">Principles</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>By Design</strong>
+            <ul>
+            <li><a href="/design#private">Private</a></li>
+            <li><a href="/design#offline">Offline</a></li>
+            <li><a href="/design#double-entry">Double-entry</a></li>
+            <li><a href="/design#multi-currency">Multi-currency</a></li>
+            <li><a href="/design#durability">Durable</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>Features</strong>
+            <ul>
+            <li><a href="/features#dashboard">Dashboard</a></li>
+            <li><a href="/features#accounts">Accounts</a></li>
+            <li><a href="/features#activity">Activity</a></li>            
+            <li><a href="/features#sync">GnuCash sync</a></li>            
+            </ul>
+        </div>
+        <div>
+            <strong>Community</strong>
+            <ul>
+            <li><a href="https://discord.gg/Wsk6MKnBr5">Discord</a></li>
+            <li><a href="https://www.reddit.com/r/HandsOnMoney/">Reddit</a></li>
+            <li><a href="https://www.youtube.com/@HandsOnMoneyApp">Youtube</a></li>
+            <li><a href="https://github.com/HandsOnMoney">GitHub</a></li>
+            <li><a href="https://x.com/VitalikPie">X</a></li>
+            </ul>
+        </div>        
+        </div>
+    </footer>

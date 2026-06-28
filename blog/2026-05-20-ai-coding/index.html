@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- template-start:head -->
+<!-- head content here -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>HandsOnMoney</title>
+</head>
+<!-- template-end -->
+
+<body>
+
+    <!-- template-start:nav -->
+<!-- Header with nav -->
+<nav class="container">
+    <ul>
+    <li>
+        <a href="/">
+        <img src="/assets/favicon.png" alt="Logo" style="height: 24px; margin-right: 8px; vertical-align: middle; border-radius: 4px;">
+        <strong>HandsOnMoney</strong>
+        </a>
+    </li>
+    </ul>
+    <ul>
+    <li><a href="/features">Features</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="https://apps.apple.com/us/app/handsonmoney/id6740042181">Download</a></li>
+    </ul>
+</nav>
+<!-- template-end -->
+    <main class="container">
+        <div style="margin-bottom: 32px;">
+            <div style="font-size: 14px; color: #6e6e73; margin-bottom: 8px;">May 20, 2026 • Author: Vitalik</div>
+            <h1 style="margin: 0;">LLM can't reflect for you</h1>
+        </div>
+
+        <p>Don't use AI when you don't know what you're doing. Seriously. You rob yourself of struggle. And you're likely causing a mess without knowing it.</p>
+
+        <p>Our family dog forces me on at least one walk a day. Usually my mind spontaneously drifts into some weird "deep mode" where I unintentionally get insights.</p>
+
+        <p>That was one of those days. I got a bit of AI psychosis after watching <a href="https://youtu.be/kwSVtQ7dziU">Karpathy's interview</a> and decided that I need to at least try AI with HandsOnMoney. First things first — I spent a couple of days on a pretty decent plan for Claude. Then I hit my quota after Claude worked for about 3 hours to implement a new feature in HandsOnMoney. It stopped on the last step — wiring all the pieces together. I decided to finish it by hand since it involved a lot of UI work and judgment calls. Then I found myself on a walk, thinking about storing quotes. Why the hell did Claude store it as numerator and denominator when my database design uses minor units and precision?</p>
+
+        <p>I believe every developer has this gut-feel when something is off. That was exactly my mood when I fixed a trivial UX inconsistency. It's this kind of painfully unproductive day when you don't want to code because everything feels odd. And everything was odd:</p>
+
+        <ol>
+            <li>A field name on the <code>Prices</code> table was wrong — <code>price</code>. Why is it price? Why not rate? Currencies are commodities too. But then what does it mean to have a rate for stocks?</li>
+            <li>That weird denominator thing. How the heck am I going to calculate it? What the heck is it actually — a leetcode problem?</li>
+            <li>A function that pulls all the prices into memory to find the latest price for every commodity. "Claude, what the hell? We are on iPhone — not on a server."</li>
+        </ol>
+
+        <p>While it was easy to fix the in-memory join and naming, the second put me into deadly analysis paralysis. These are all judgment calls. No AI can make them for me — the only thing I can task it with is research. So I dug. How do other systems implement the same functionality? I dusted off forgotten pieces from my past: the FIX Protocol, TradingWorkstation APIs, market data feeds. Nobody uses the GnuCash approach with numerator and denominator. After all, who in the world would set the denominator to anything but a decimal? Gotcha — Claude brought me the answer: stock splits. And the GnuCash first release was 1998, three years before American exchanges fully adopted decimal prices.</p>
+
+        <p>Long story short — Claude did a good job. It did exactly what I asked it to do. What it didn't do was make me reflect while implementing the feature. That "something is off" gut-feeling would have probably surfaced the moment I worked on the table design, rather than after the feature was already built. It's truly a genie — it will do exactly the thing you asked for. But coding is not a straight translation of an idea into code. It's a way to sharpen your idea, through reflecting, doubting, and all the painfully slow things we developers do — struggling over the right variable name, premature optimization, you name it. Coding is more like writing than mechanical number crunching on a TI-85.</p>
+
+        <p>So am I going to use AI? Absolutely. Am I going to make it implement core functionality? Hell no. I have to struggle through it to build something that lasts. Claude is amazing at doing things I would have avoided before. Unit tests? Claude will do it in 10 minutes. Rewiring an existing module from direct DB access to the application layer — sign me up.</p>
+
+        
+        <p>P.S. Spotted em-dashes? I used Claude to fix typos, commas, and mistakes. Every piece is my lived experience.</p>
+
+        <p>P.P.S. Here is that good boy who causes deep thinking.</p>
+
+        <img src="good-boy.png" alt="Good boy" style="max-width: 50%; height: auto; margin-top: 24px;">
+        
+    </main>
+
+    <!-- template-start:footer -->
+    <footer class="container">
+        <div class="grid">
+        <div style="grid-column: span 2;">
+            <br/>
+            <p>
+                Built slowly by Vitalik.
+                <br/>
+                Shaped by brave first adopters.            
+            </p>
+        </div>
+        <div>
+            <strong>About</strong>
+            <ul>
+            <li><a href="/principles.html" class="secondary">Principles</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>By Design</strong>
+            <ul>
+            <li><a href="/design#private">Private</a></li>
+            <li><a href="/design#offline">Offline</a></li>
+            <li><a href="/design#double-entry">Double-entry</a></li>
+            <li><a href="/design#multi-currency">Multi-currency</a></li>
+            <li><a href="/design#durability">Durable</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>Features</strong>
+            <ul>
+            <li><a href="/features#dashboard">Dashboard</a></li>
+            <li><a href="/features#accounts">Accounts</a></li>
+            <li><a href="/features#activity">Activity</a></li>            
+            <li><a href="/features#sync">GnuCash sync</a></li>            
+            </ul>
+        </div>
+        <div>
+            <strong>Community</strong>
+            <ul>
+            <li><a href="https://discord.gg/Wsk6MKnBr5">Discord</a></li>
+            <li><a href="https://www.reddit.com/r/HandsOnMoney/">Reddit</a></li>
+            <li><a href="https://www.youtube.com/@HandsOnMoneyApp">Youtube</a></li>
+            <li><a href="https://github.com/HandsOnMoney">GitHub</a></li>
+            <li><a href="https://x.com/VitalikPie">X</a></li>
+            </ul>
+        </div>        
+        </div>
+    </footer>
+<!-- template-end -->
+
+</body>
+
+</html>

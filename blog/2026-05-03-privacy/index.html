@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- template-start:head -->
+<!-- head content here -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>HandsOnMoney</title>
+</head>
+<!-- template-end -->
+
+<body>
+
+    <!-- template-start:nav -->
+<!-- Header with nav -->
+<nav class="container">
+    <ul>
+    <li>
+        <a href="/">
+        <img src="/assets/favicon.png" alt="Logo" style="height: 24px; margin-right: 8px; vertical-align: middle; border-radius: 4px;">
+        <strong>HandsOnMoney</strong>
+        </a>
+    </li>
+    </ul>
+    <ul>
+    <li><a href="/features">Features</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="https://apps.apple.com/us/app/handsonmoney/id6740042181">Download</a></li>
+    </ul>
+</nav>
+<!-- template-end -->
+    <main class="container">
+        <div style="margin-bottom: 32px;">
+            <div style="font-size: 14px; color: #6e6e73; margin-bottom: 8px;">May 3, 2026 • Author: Vitalik</div>
+            <h1 style="margin: 0;">Analytics, Privacy, and Transparency</h1>
+        </div>
+
+        <p>Several people asked about analytics in HandsOnMoney, which is an important topic, especially for a finance app.</p>
+
+        <p>With the latest release, HandsOnMoney includes an <strong>Analytics Opt-Out</strong> setting and the ability to request data deletion. I also wanted to clearly explain:</p>
+
+        <ul>
+            <li>why analytics exists</li>
+            <li>what is collected</li>
+            <li>what is <strong>not</strong> collected</li>
+            <li>whether data is sold</li>
+            <li>how to disable analytics completely</li>
+        </ul>
+
+        <h2>Short version</h2>
+
+        <p>HandsOnMoney uses lightweight analytics to improve the product.</p>
+
+        <p>It does <strong>not</strong> send your transactions, balances, account names, receipts, imported files, or other financial records to analytics.</p>
+
+        <p>I do <strong>not</strong> sell user data.</p>
+
+        <p>You can now disable analytics anytime in:</p>
+
+        <p><strong>Settings → Privacy</strong></p>
+
+        <h2>Why analytics exists</h2>
+
+        <p>I use analytics for two practical reasons:</p>
+
+        <h3>1. To understand where users get stuck</h3>
+
+        <p>For example:</p>
+
+        <ul>
+            <li>onboarding drop-offs</li>
+            <li>confusing screens</li>
+            <li>buttons people tap but abandon</li>
+            <li>sync flows that fail too often</li>
+        </ul>
+
+        <p>This helps me improve the product based on real usage instead of guessing.</p>
+
+        <h3>2. To measure whether HandsOnMoney is becoming useful</h3>
+
+        <p>I look at retention metrics such as whether users continue using the app after days or weeks.</p>
+
+        <p>That helps answer an important question:</p>
+
+        <p><strong>Is HandsOnMoney creating enough value for people to come back?</strong></p>
+
+        <h2>My principles</h2>
+
+        <h3>Collect as little as possible</h3>
+
+        <p>I only want enough data to improve the app.</p>
+
+        <h3>Never collect financial content for analytics</h3>
+
+        <p>Your books and financial records should stay your business.</p>
+
+        <h3>Give users control</h3>
+
+        <p>If you do not want analytics enabled, you can turn it off.</p>
+
+        <h3>Build trust long term</h3>
+
+        <p>Trust matters more than short-term metrics.</p>
+
+        <h2>What is collected</h2>
+
+        <p>Typical analytics events are things like:</p>
+
+        <ul>
+            <li>screen opened</li>
+            <li>button tapped</li>
+            <li>sync completed</li>
+            <li>sync failed</li>
+            <li>app error occurred</li>
+        </ul>
+
+        <p>This helps me understand what works and what needs fixing.</p>
+
+        <h2>What is NOT collected</h2>
+
+        <p>HandsOnMoney analytics does <strong>not</strong> include:</p>
+
+        <ul>
+            <li>transaction amounts</li>
+            <li>payees</li>
+            <li>memos</li>
+            <li>balances</li>
+            <li>budgets</li>
+            <li>account names</li>
+        </ul>
+
+        <p>That information is not useful for improving flows or onboarding, so it is intentionally not included.</p>
+
+        <h2>Do I sell data?</h2>
+
+        <p>No.</p>
+
+        <p>HandsOnMoney is not an advertising business, and I do not sell user data.</p>
+
+        <p>I also intentionally limit what analytics contains.</p>
+
+        <p>That means I do <strong>not</strong> collect the kinds of rich personal or financial datasets that are commonly valuable to advertisers, brokers, or data resellers.</p>
+
+        <p>In simple terms:</p>
+
+        <p><strong>I cannot sell what I chose not to collect.</strong></p>
+
+        <h2>What about technical metadata?</h2>
+
+        <p>Like many analytics systems, some technical device information may be included automatically to help diagnose compatibility issues, such as:</p>
+
+        <ul>
+            <li>app version</li>
+            <li>iOS version</li>
+            <li>device type</li>
+            <li>general region / country</li>
+            <li>language / locale</li>
+        </ul>
+
+        <p>I actively minimize or disable fields that feel excessive or unnecessary.</p>
+
+        <h2>My litmus test</h2>
+
+        <p>Before adding any analytics event, I ask:</p>
+
+        <p><strong>If this data were exposed tomorrow, could it reveal someone's finances or meaningfully compromise their privacy?</strong></p>
+
+        <p>If the answer is yes, it should not be logged.</p>
+
+        <h2>Analytics Opt-Out</h2>
+
+        <p>If you prefer no analytics at all, you can disable it anytime:</p>
+
+        <p><strong>Settings → Privacy</strong></p>
+
+        <p>That setting is there because reasonable people can disagree about analytics, and users should have control.</p>
+
+        <h2>Technical appendix</h2>
+
+        <p>For users who want deeper transparency, I will also publish technical blogs covering:</p>
+
+        <ul>
+            <li>analytics events currently sent</li>
+            <li>SDK configuration choices</li>
+            <li>fields intentionally disabled</li>
+            <li>examples of tracked events</li>
+            <li>privacy safeguards in error logging</li>
+        </ul>
+
+        <h2>Final note</h2>
+
+        <p><strong>HandsOnMoney is a small independent project.</strong></p>
+
+        <p>My goal is to build a sustainable product people trust. Not to extract value from their personal data.</p>
+
+        <p>I'm trying to find the right balance between understanding what works, what doesn't, and respecting your privacy.</p>
+
+        <p>If any part feels excessive, or if you think something could be used against users, please let me know.</p>
+
+        <p>Thank you to everyone who raised these questions. They directly shaped this release.</p>
+
+    </main>
+
+    <!-- template-start:footer -->
+    <footer class="container">
+        <div class="grid">
+        <div style="grid-column: span 2;">
+            <br/>
+            <p>
+                Built slowly by Vitalik.
+                <br/>
+                Shaped by brave first adopters.            
+            </p>
+        </div>
+        <div>
+            <strong>About</strong>
+            <ul>
+            <li><a href="/principles.html" class="secondary">Principles</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>By Design</strong>
+            <ul>
+            <li><a href="/design#private">Private</a></li>
+            <li><a href="/design#offline">Offline</a></li>
+            <li><a href="/design#double-entry">Double-entry</a></li>
+            <li><a href="/design#multi-currency">Multi-currency</a></li>
+            <li><a href="/design#durability">Durable</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>Features</strong>
+            <ul>
+            <li><a href="/features#dashboard">Dashboard</a></li>
+            <li><a href="/features#accounts">Accounts</a></li>
+            <li><a href="/features#activity">Activity</a></li>            
+            <li><a href="/features#sync">GnuCash sync</a></li>            
+            </ul>
+        </div>
+        <div>
+            <strong>Community</strong>
+            <ul>
+            <li><a href="https://discord.gg/Wsk6MKnBr5">Discord</a></li>
+            <li><a href="https://www.reddit.com/r/HandsOnMoney/">Reddit</a></li>
+            <li><a href="https://www.youtube.com/@HandsOnMoneyApp">Youtube</a></li>
+            <li><a href="https://github.com/HandsOnMoney">GitHub</a></li>
+            <li><a href="https://x.com/VitalikPie">X</a></li>
+            </ul>
+        </div>        
+        </div>
+    </footer>
+<!-- template-end -->
+
+</body>
+
+</html>
