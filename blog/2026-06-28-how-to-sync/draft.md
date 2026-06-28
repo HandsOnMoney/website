@@ -18,7 +18,7 @@ Who are “the users”
 
 The users can be real people needing access to a shared GnuCash book. Or it can be  you accessing your file from multiple devices.
 
-An important thing here is that GnuCash is inherently a desktop software. However, there are enthusiasts (including your truly) who develop companion software to access the book from mobile platforms.
+An important thing here is that GnuCash is inherently a desktop software. However, there are enthusiasts (including yours truly) who develop companion software to access the book from mobile platforms.
 
 Thus said, let’s talk about the ways you can share your book among several devices.
 
@@ -44,8 +44,8 @@ Each solution has its rating on different dimensions.
 
 Column 1	Column 2
 Safety	How safe can I feel about my data getting corrupted?
-Automation	How much automatic tooling is availabe vs. how much manual labor it will require to support.
-Multi-user	How well does this solution works with multuple users.
+Automation	How much automatic tooling is available vs. how much manual labor it will require to support.
+Multi-user	How well does this solution work with multiple users.
 Real-time	How soon do I see data entered in other devices?
 Privacy & security	How much information do other companies see and how much it’s prone for security breaches.
 
