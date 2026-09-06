@@ -6,4 +6,4 @@ This repo is a mess - basically a bunch of HTML files wired together with duckta
 
 Cheers!
 
-P.S. Yeah I know HTML and ducktape is a horrible solution - but I'm busy building HandsOnMoney.
+P.S. Yeah I know HTML and ducktape is a horruble solution - but I'm busy building HandsOnMoney.
