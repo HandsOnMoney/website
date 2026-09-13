@@ -36,31 +36,51 @@
     <main class="container">
         <div style="margin-bottom: 32px;">
             <div style="font-size: 14px; color: #6e6e73; margin-bottom: 8px;">September 6, 2026 • Author: Vitalik</div>
-            <h1 style="margin: 0;">I'm slow and AI doesn't help much</h1>
+            <h1 style="margin: 0;">Why slow?</h1>
         </div>
 
-        <p>It's 2026. Software engineering is solved. Yet I'm working "slow". Why didn't I hop on the AI rocket and ship 100x faster?</p>
+        # Who's slow? Me?
 
-        <p>I think we can apply this argument to this short blog post too. I'm rewriting it for the 3rd time because I don't like what comes out. GPT or Claude could do it in no time! No one gonna read it, and it will not change my thought process. BTW, I have no illusions about my "writing" - maybe no one will read it. Yet the last part is precious - I reflected while writing.</p>
+If you asking me if I'm slow, I'll swear I'm not.
 
-        <p>Here is how I work on HandsOnMoney. Wake up early while everyone is asleep. Crack my laptop, open Xcode, and jump into code. I am on the clock to wrap a bug fix or deliver something toward the next feature. Feedback is fast - I change one thing, and Xcode shows me why it's dumb (compilation error, button is too small) in seconds. When things are ready, hit run, and I'm testing how the change "feels" on a real device - almost instantaneously. Gosh, it feels awful, I feel dumb, and I'm going back to square one.</p>
+I work on HandsOnMoney every day. Two to fours  day. On weekends and holidays.
 
-        <p>Almost any knowledge worker recognizes that - it's a "flow state". A state of the mind when you become single with what you are trying to build. My method to achieve described well by <a href="https://calnewport.com/deep-work-rules-for-focused-success-in-a-distracted-world/">Cal Newport's Deep Work</a>. I adopted his method a few years back, and it serves me extremely well.</p>
+I work early mornings or late nights when everyone are asleep. I remove all the possible distractions and put myself into a flow mode. Where I become single with code and a problem I'm trying to solve.
 
-        <p>What I described does not feel slow. Yet overall I don't ship a new feature every week. Why so?</p>
+I should admit though that I might be confusing business with productivity. I don't ship a major feature every week. Heck I'm happy if can ship something major at least once a month.
 
-        <p>It's not because I can't cram the code faster. I bet I can. And AI can do it in no time! The thing I build is not an app. It's my reasoning about personal finance, user experience, and what's not in the app.</p>
+# What's hard?
 
-        <p>So here is my theory - the value of HandsOnMoney is not in how fast I ship it, but rather in how well my thought process is aligned with yours (my user). AI can't go out, talk with people, make a conclusion, and build something viable. It's a human's job to talk with other humans, understand their problem, assess if a product can solve it, and if it general enough problem to solve. The coding part is rather small here, and manual coding prevents me from doing dumb things - because, as a human, I'm lazy.</p>
+I spend around 50% of time coding. Yet I do not think it's coding that's a bottleneck in shipping features faster.
 
-        <p>When I close my laptop, a "slow" part kicks in (see <a href="https://calnewport.com/my-new-book-slow-productivity/">Slow Productivity</a>). I do my job. Raise a family, walk a dog, live a life. And somewhere in the middle comes an insight. An "aha!" moment, when a solution to a problem comes seemingly out of nowhere. Again, I have no illusions about myself. I'm not Sir Isaac Newton. My "aha" moments are small, yet they deliver value to me. It can be realizing how to structure a chart (e.g., what's best for a net worth chart - pie or bar chart?). Or it can be a realization that I can't apply the "last write wins" method used by Actual Budget because it will break the books.</p>
+Application's code is like a legal contract. A wall of text made of precise language. Worked out through years and years of experience. I program for 20 years and do professional software engineering for the last 15 years. So writing code is not a big deal. I think in code so the process of typing is rather fast. It's rare when I'm getting stack seriously for more than an hour with code. Also Internet, and modern languages made this process even lot easier.
 
-        <p>So unfortunately (or fortunately), AI can't process reflection faster. It can do the absolute opposite - making me watch memes while AI is building (yes, I'm looking at you at you Chad IDE)</p>
+Then why it takes so much time and what's that that takes so much time?
 
-        <p>I absolutely agree that AI can do it in no time. And you know what? McDonald's can cook you a hamburger in no time. The thing is - the app built without a human reflecting feels exactly like a hamburger from McDonald's - a bit of a cardboard taste but has calories. I'll be honest with you - I eat McDonald's, and I use AI. But it's not my dream to be able to cook as fast as McDonalds. My dream is to solve personal finance for people like my wife and me. Turbo-nerds and just people living their lives, not knowing how beautiful an Excel spreadsheet is, might be.</p>
+It's knowledge acquisition. With HandsOnMoney I'm trying to understand how to merge two words - nerds's world of double-entry accounting and busy person world of simple finance trackers. Sure there is definite answers to things that are set in stone - like accounting equation. But there is no definite answer to things like displaying net worth chart, guiding users throught onboarding, or preventing them to make iCloud file conflicts.
 
-        <p>P.S. I'm not Ed Zitron to say there is no value in AI. There is - dull and boring stuff like unit tests or writing "what's changed" is on AI. There is just not enough value for the core activity.</p>
+I'll be honest with you that was and is the most hardest challenge. And that's where majority of time goes in. I make something that I think makes sense, and then it simply looks ugly, does not make sense, or feels wrong. And it takes more iterations to make it at least more right than wrong.
 
+And the is one more time sink. Changing previous asumptions. In software engineering it's called refactoring. And surely it can be done with AI. Yet I do it manually. Because these are my assumptions that needs corrections, thus I want to be a driver seat to make sure that the new assumption do not break old and actually make sense.
+
+# Outsource? Open source? AI? 
+
+So theoretically I can delegate those tasks to churn features faste:
+
+* I can hire a small team
+* Make HandsOnMoney open source and build a community
+* Or engineer a system where AI ships
+
+Each approach has it's own pros and cons. Hiring a team would test my leadership and management abilities and burn some of my personal savings. Making it open source will build more trust and hopefully bring other humans to the table, but will risk a "bazaar of  ideas"-style product and dever limited attention to community building. Building with brings more questions to answers (how can I delegate dicision making to a machine that does not have my product taste, faster but prduces too much code).
+
+All those practices would take decision make from me. And that's a core problem for a prduct at it's infancy like HandsOnMoney.
+
+# Will it be like this forever?
+
+Of course no. I'm not dogmatic about coding with AI, love working with people and open to different ways of working.
+
+When I'm done with HandsOnMoney core mechanics. I'll need a lot of help shipping HandsONmoney to other platforms Android, web and desktop. And surely I'll ask for help. For now I'll stick to what I do now, slowly aquiring knowledge of what's working and what's not.
+        
     </main>
 
     <!-- template-start:footer -->
