@@ -1,40 +1,142 @@
-Hi all!
+<!DOCTYPE html>
+<html lang="en">
 
-I think it's worth sharing this publicly instead of silently working on something.
+<!-- template-start:head -->
+<!-- head content here -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>HandsOnMoney</title>
+</head>
+<!-- template-end -->
 
-Here is what I work on and plan to work on in the rest of 2026.
+<body>
 
-It’s more of a direction rather than something set in stone.
+    <!-- template-start:nav -->
+<!-- Header with nav -->
+<nav class="container">
+    <ul>
+    <li>
+        <a href="/">
+        <img src="/assets/favicon.png" alt="Logo" style="height: 24px; margin-right: 8px; vertical-align: middle; border-radius: 4px;">
+        <strong>HandsOnMoney</strong>
+        </a>
+    </li>
+    </ul>
+    <ul>
+    <li><a href="/features">Features</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="https://apps.apple.com/us/app/handsonmoney/id6740042181">Download</a></li>
+    </ul>
+</nav>
+<!-- template-end -->
+    <main class="container">
+        <div style="margin-bottom: 32px;">
+            <div style="font-size: 14px; color: #6e6e73; margin-bottom: 8px;">September 13, 2026 • Author: Vitalik</div>
+            <h1 style="margin: 0;">2026 Roadmap</h1>
+        </div>
 
-So the general direction is: “Make HandsOnMoney simple so even a busy mom can figure it out”. However, this direction does not mean dumbifying the app. The end goal is still the same:
+        <p>Hi all!</p>
 
-Simple by Default, Powerful when Needed
+        <p>I think it's worth sharing this publicly instead of silently working on something.</p>
 
-Right now, HandsOnMoney is far away from that.
+        <p>Here is what I work on and plan to work on in the rest of 2026.</p>
 
-Current users are missing features like:
+        <p>It's more of a direction rather than something set in stone.</p>
 
-* Spending report
-* Fresh export to GnuCash file
-* No way to edit split description
-* Trading accounts support
+        <p>So the general direction is: "Make HandsOnMoney simple so even a busy mom can figure it out". However, this direction does not mean dumbifying the app. The end goal is still the same:</p>
 
-New users are stumbling upon
+        <p><strong>Simple by Default, Powerful when Needed</strong></p>
 
-1. Unintuitive onboarding (there are people who do not know what GnuCash is!)
-2. Settings as a tab. Settings is not something people use on a daily basis, it’s something that is tweaked once in a while. It should be accessible from the dashboard. But not as one of the primary screens.
-3. Complicated settings. Commodities should be managed from a separate tab - “investments”. Currencies can be much simpler. Data sync can actually be a widget on a dashboard.
-4. “Create transaction” screen is complex. Make it simpler by reducing choices. Templates for expense, income, refund, and transfer (of course keeping current screen as an option).
-5. There are a few screens that differ from each other. It looks like two different people built them. The look and feel should be the same.
-6. There are a few surfaces that are confusing for newcomers. Why is this square empty and shows “no data?”. Modern UX can be applied to make it easier to get onboarded instead of being confusing.
+        <p>Right now, HandsOnMoney is far away from that.</p>
 
-Why
+        <p>Current users are missing features like:</p>
 
-Analytics show that ~60% of people downloading the app go to demo mode, explore it, and then get stuck.
+        <ul>
+            <li>Spending report</li>
+            <li>Fresh export to GnuCash file</li>
+            <li>No way to edit split description</li>
+            <li>Trading accounts support</li>
+        </ul>
 
-My theory - those people do not know how to proceed from there.
+        <p>New users are stumbling upon</p>
 
-Of course those people may do like what they saw in “demo mode”.
+        <ol>
+            <li>Unintuitive onboarding (there are people who do not know what GnuCash is!)</li>
+            <li>Settings as a tab. Settings is not something people use on a daily basis, it's something that is tweaked once in a while. It should be accessible from the dashboard. But not as one of the primary screens.</li>
+            <li>Complicated settings. Commodities should be managed from a separate tab - "investments". Currencies can be much simpler. Data sync can actually be a widget on a dashboard.</li>
+            <li>"Create transaction" screen is complex. Make it simpler by reducing choices. Templates for expense, income, refund, and transfer (of course keeping current screen as an option).</li>
+            <li>There are a few screens that differ from each other. It looks like two different people built them. The look and feel should be the same.</li>
+            <li>There are a few surfaces that are confusing for newcomers. Why is this square empty and shows "no data?". Modern UX can be applied to make it easier to get onboarded instead of being confusing.</li>
+        </ol>
 
-But this is the exactly hypothesis I’m checking - “will making HandsOnMoney more approachable bring more users?”
+        <h2>Why</h2>
 
+        <p>Analytics show that ~60% of people downloading the app go to demo mode, explore it, and then get stuck.</p>
+
+        <p>My theory - those people do not know how to proceed from there.</p>
+
+        <p>Of course those people may do like what they saw in "demo mode".</p>
+
+        <p>But this is the exactly hypothesis I'm checking - "will making HandsOnMoney more approachable bring more users?"</p>
+
+    </main>
+
+    <!-- template-start:footer -->
+    <footer class="container">
+        <div class="grid">
+        <div style="grid-column: span 2;">
+            <br/>
+            <p>
+                Built <a href="/blog/2026-09-06-why-slow">slowly</a> by Vitalik.
+                <br/>
+                Shaped by brave first adopters.
+            </p>
+        </div>
+        <div>
+            <strong>About</strong>
+            <ul>
+            <li><a href="/principles.html" class="secondary">Principles</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>By Design</strong>
+            <ul>
+            <li><a href="/design#private">Private</a></li>
+            <li><a href="/design#offline">Offline</a></li>
+            <li><a href="/design#double-entry">Double-entry</a></li>
+            <li><a href="/design#multi-currency">Multi-currency</a></li>
+            <li><a href="/design#durability">Durable</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>Features</strong>
+            <ul>
+            <li><a href="/features#dashboard">Dashboard</a></li>
+            <li><a href="/features#accounts">Accounts</a></li>
+            <li><a href="/features#activity">Activity</a></li>
+            <li><a href="/features#sync">GnuCash sync</a></li>
+            </ul>
+        </div>
+        <div>
+            <strong>Community</strong>
+            <ul>
+            <li><a href="https://discord.gg/Wsk6MKnBr5">Discord</a></li>
+            <li><a href="https://www.reddit.com/r/HandsOnMoney/">Reddit</a></li>
+            <li><a href="https://www.youtube.com/@HandsOnMoneyApp">Youtube</a></li>
+            <li><a href="https://github.com/HandsOnMoney">GitHub</a></li>
+            <li><a href="https://x.com/VitalikPie">X</a></li>
+            </ul>
+        </div>
+        </div>
+    </footer>
+<!-- template-end -->
+
+</body>
+
+</html>
